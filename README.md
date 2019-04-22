@@ -61,7 +61,11 @@ More info:
 
 ### Run as a web page, directly with editable code:
 
-https://play.jsgo.io/github.com/phrounz/go-game/src/test1
+First commit on a public repository (e.g. https://github.com/phrounz/go-game/src/test1 )
+
+ * Play: https://play.jsgo.io/github.com/phrounz/go-game/src/test1
+ * Compile: https://compile.jsgo.io/github.com/phrounz/go-game/src/test1
+ * Run: https://jsgo.io/github.com/phrounz/go-game/src/test1
 
 ### Notes:
 
