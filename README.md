@@ -38,7 +38,8 @@ dlv debug
 (dlv) quit
 ```
 
-Or press F5 while in Atom on the main.go file tab.
+Or press F5 while in Atom on the main.go file tab
+(AFAIK, must have been run in the console once before that.)
 
 #### Release
 
@@ -57,6 +58,10 @@ While it is running, open Firefox to the url: http://localhost:8080/
 
 More info:
  * https://github.com/hajimehoshi/ebiten/wiki/WebAssembly
+
+### Run as a web page, directly with editable code:
+
+https://play.jsgo.io/github.com/phrounz/go-game/src/test1
 
 ### Notes:
 
