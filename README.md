@@ -69,4 +69,4 @@ First commit on a public repository (e.g. https://github.com/phrounz/go-game )
 
 ### Notes:
 
-Reminder: Ctrl+Shift+M show preview for .md files like this one.
+Reminder: on Atom, Ctrl+Shift+M show preview for .md files like this one.
