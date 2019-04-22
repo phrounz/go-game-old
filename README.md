@@ -31,7 +31,7 @@ More info:
 #### Debug
 
 ```
-cd go-game-test/src/test1
+cd go-game/src/test1
 dlv debug
 
 (dlv) continue
@@ -43,14 +43,14 @@ Or press F5 while in Atom on the main.go file tab.
 #### Release
 
 ```
-cd go-game-test/src/test1
+cd go-game/src/test1
 go build && test1.exe
 ```
 
 ### Run as a web page
 
 ```
-cd go-game-test/src/test1
+cd go-game/src/test1
 wasmgo serve
 ```
 While it is running, open Firefox to the url: http://localhost:8080/
