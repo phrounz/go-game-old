@@ -12,7 +12,6 @@ Install Atom packages with Ctrl+, -> Install:
 
 ```
 go-plus
-platformio-ide-terminal
 minimap
 ```
 
@@ -32,7 +31,8 @@ More info:
 #### Debug
 
 ```
-dlv debug test1
+cd go-game-test/src/test1
+dlv debug
 
 (dlv) continue
 (dlv) quit
@@ -44,7 +44,7 @@ Or press F5 while in Atom on the main.go file tab.
 
 ```
 cd go-game-test/src/test1
-go build test1 && test1.exe
+go build && test1.exe
 ```
 
 ### Run as a web page
