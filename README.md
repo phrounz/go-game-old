@@ -39,7 +39,7 @@ dlv debug
 (dlv) quit
 ```
 
-Or press F5 while in Atom on the main.go file tab
+Or press F5 while in Atom on the main.go file tab, and select config "Debug"
 (AFAIK, must have been run in the console once before that.)
 
 #### Release
