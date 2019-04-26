@@ -19,7 +19,8 @@ Run in a terminal:
 ```
 go get github.com/hajimehoshi/ebiten
 go get -u github.com/dave/wasmgo
-go get -u github.com/gopherjs/gopherwasm
+##(not useful/working?) go get -u github.com/gopherjs/gopherwasm
+go get -u github.com/go-delve/delve/cmd/dlv
 ```
 
 More info:
