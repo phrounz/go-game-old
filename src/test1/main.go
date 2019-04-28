@@ -151,7 +151,7 @@ func main() {
 		ratio = float64(desktopHeight) / 1024.0 // 0.5
 	}
 
-	if err := ebiten.Run(update, 1024, 1024, ratio, "Ludum Dare 44 - Made by volatile-dove"); err != nil {
+	if err := ebiten.Run(update, 1024, 1024, ratio, "Ludum Dare 44"); err != nil {
 		log.Fatal(err)
 	}
 
