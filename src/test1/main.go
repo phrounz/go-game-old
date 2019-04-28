@@ -4,7 +4,7 @@ import (
 
 	//"image/color"
 	"image/color"
-	_ "image/jpeg"
+	//"image/jpeg"
 	_ "image/png"
 	"log"
 	"os"
@@ -14,7 +14,6 @@ import (
 	"github.com/hajimehoshi/ebiten/examples/resources/fonts"
 	"github.com/lxn/win"
 	"golang.org/x/image/font"
-	//"github.com/hajimehoshi/ebiten/examples/resources/images"
 )
 
 const (
@@ -141,8 +140,6 @@ func update(screen *ebiten.Image) error {
 func main() {
 	imageLoading = loadImageFromFile("data/loading.png")
 
-	//ebiten.SetFullscreen(true)
-	//desktopWidth := int(win.GetSystemMetrics(win.SM_CXSCREEN))
 	desktopHeight := int(win.GetSystemMetrics(win.SM_CYSCREEN))
 
 	if len(os.Args) > 1 && os.Args[1] == "-fullscreen" {
@@ -153,10 +150,8 @@ func main() {
 	if desktopHeight < 1024 {
 		ratio = float64(desktopHeight) / 1024.0 // 0.5
 	}
-	//fmt.Printf("%dx%d\n", desktopWidth, desktopHeight)
-	//ebiten.ScreenSizeInFullscreen(1024, 1024)
 
-	if err := ebiten.Run(update, 1024, 1024, ratio, "Ludum Dare 44 - Your life is currency - made by Francois Braud"); err != nil {
+	if err := ebiten.Run(update, 1024, 1024, ratio, "Ludum Dare 44 - Made by volatile-dove"); err != nil {
 		log.Fatal(err)
 	}
 
