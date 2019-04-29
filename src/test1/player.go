@@ -41,10 +41,10 @@ func NewPlayer() *Player {
 		collisionRequest: COLLISION_REQUEST_NONE,
 		//pos:            Pos{x: 301.0, y: 664.0},
 		pos:            Pos{x: 301.0, y: 675.0},
-		imgLeftTop:     loadImageFromFile("data/player_lefttop.png"),
-		imgLeftBottom:  loadImageFromFile("data/player_leftbottom.png"),
-		imgRightTop:    loadImageFromFile("data/player_righttop.png"),
-		imgRightBottom: loadImageFromFile("data/player_rightbottom.png")}
+		imgLeftTop:     loadImageFromFile("data/misc/player_lefttop.png"),
+		imgLeftBottom:  loadImageFromFile("data/misc/player_leftbottom.png"),
+		imgRightTop:    loadImageFromFile("data/misc/player_righttop.png"),
+		imgRightBottom: loadImageFromFile("data/misc/player_rightbottom.png")}
 	p.imgToDraw = p.imgRightBottom
 	return p
 }

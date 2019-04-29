@@ -18,12 +18,12 @@ func NewTeleporter() *Teleporter {
 	return &Teleporter{
 		nbCluesFound: 0,
 		clueFound:    []int{-1, -1, -1},
-		cluePos:      []Pos{Pos{x: 506, y: 728}, Pos{x: 445, y: 671}, Pos{x: 508, y: 622}},
+		cluePos:      []Pos{{x: 506, y: 728}, {x: 445, y: 671}, {x: 508, y: 622}},
 		isInClue:     []bool{false, false, false},
 		imageParchments: []*ebiten.Image{
-			loadImageFromFile("data/parchment0.png"),
-			loadImageFromFile("data/parchment1.png"),
-			loadImageFromFile("data/parchment2.png")}}
+			loadImageFromFile("data/misc/parchment0.png"),
+			loadImageFromFile("data/misc/parchment1.png"),
+			loadImageFromFile("data/misc/parchment2.png")}}
 }
 
 //------------------------------------------------------------------------------

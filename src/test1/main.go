@@ -12,7 +12,6 @@ import (
 	"github.com/golang/freetype/truetype"
 	"github.com/hajimehoshi/ebiten"
 	"github.com/hajimehoshi/ebiten/examples/resources/fonts"
-	"github.com/lxn/win"
 	"golang.org/x/image/font"
 )
 
@@ -75,9 +74,9 @@ func update(screen *ebiten.Image) error {
 
 		drawAtPos(screen, imageLoading, Pos{x: 0, y: 0})
 
-		imageIntroduction = loadImageFromFile("data/introduction.png")
-		imageMissingClues = loadImageFromFile("data/missing_clues.png")
-		imageWinTheGame = loadImageFromFile("data/win_the_game.png")
+		imageIntroduction = loadImageFromFile("data/misc/introduction.png")
+		imageMissingClues = loadImageFromFile("data/misc/missing_clues.png")
+		imageWinTheGame = loadImageFromFile("data/misc/win_the_game.png")
 
 		loadTempleData()
 		temple = NewTemple(imageIntroduction)
@@ -138,15 +137,14 @@ func update(screen *ebiten.Image) error {
 //------------------------------------------------------------------------------
 
 func main() {
-	imageLoading = loadImageFromFile("data/loading.png")
-
-	desktopHeight := int(win.GetSystemMetrics(win.SM_CYSCREEN))
+	imageLoading = loadImageFromFile("data/misc/loading.png")
 
 	if len(os.Args) > 1 && os.Args[1] == "-fullscreen" {
 		ebiten.SetFullscreen(true)
 	}
 
 	var ratio = 1.0
+	var desktopHeight = getDesktopHeight()
 	if desktopHeight < 1024 {
 		ratio = float64(desktopHeight) / 1024.0 // 0.5
 	}
