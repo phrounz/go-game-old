@@ -3,8 +3,13 @@
 use strict;
 use warnings;
 use File::Basename qw/basename dirname/;
+use File::Copy qw/copy/;
 
 my $VERBOSE = 1;
+
+my $SMALL_IMAGES_FOR_ROTATION = 1;
+
+my $IMAGEMAGICK_CMD_LINE_UTILITY = 'C:\Users\moi\Desktop\ImageMagick-7.0.8-42-portable-Q16-x64\magick';
 
 open FDW, ">data_go/data.go" || die $!;
 
@@ -27,7 +32,17 @@ sub doFolder {
       mkdir dirname($outfile) unless (-d dirname($outfile));
       # my $bn = basename($file, ".png");
       #print FDW '//go:generate ../file2byteslice -package='.$package_name.' -input='.$file.' -output='.$outfile.' -var='.$bn.'_png'."\n"
-      my $cmd = "./file2byteslice -package=data_go -input=$file -output=$outfile -var=$outvar ";
+
+      my $tmpfile = $file;
+      if ($SMALL_IMAGES_FOR_ROTATION && ($file=~/\/small\//)) {
+        $tmpfile = "tmp_file_image_magick~";
+        copy($file, $tmpfile);
+        my $cmd_resize ="$IMAGEMAGICK_CMD_LINE_UTILITY mogrify -resize 25% $tmpfile";
+        print "=> $cmd_resize\n" if $VERBOSE;
+        print `$cmd_resize`;
+      }
+
+      my $cmd = "./file2byteslice -package=data_go -input=$tmpfile -output=$outfile -var=$outvar ";
       print "=> $cmd\n" if $VERBOSE;
       print `$cmd`;
 
