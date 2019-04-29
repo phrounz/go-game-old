@@ -8,7 +8,7 @@ use File::Copy qw/copy/;
 my $VERBOSE = 1;
 
 my $SMALL_IMAGES_FOR_ROTATION = 1;
-
+my $PERCENT_SMALL_IMAGES = 40;
 my $IMAGEMAGICK_CMD_LINE_UTILITY = 'C:\Users\moi\Desktop\ImageMagick-7.0.8-42-portable-Q16-x64\magick';
 
 open FDW, ">data_go/data.go" || die $!;
@@ -37,7 +37,7 @@ sub doFolder {
       if ($SMALL_IMAGES_FOR_ROTATION && ($file=~/\/small\//)) {
         $tmpfile = "tmp_file_image_magick~";
         copy($file, $tmpfile);
-        my $cmd_resize ="$IMAGEMAGICK_CMD_LINE_UTILITY mogrify -resize 25% $tmpfile";
+        my $cmd_resize ="$IMAGEMAGICK_CMD_LINE_UTILITY mogrify -resize $PERCENT_SMALL_IMAGES% $tmpfile";
         print "=> $cmd_resize\n" if $VERBOSE;
         print `$cmd_resize`;
       }
