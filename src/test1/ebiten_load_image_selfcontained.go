@@ -7,7 +7,8 @@ import (
 	"image"
 	"log"
 
-	"./data_go"
+	//"./data_go"
+	"github.com/phrounz/go-game/src/test1/data_go"
 
 	"github.com/hajimehoshi/ebiten"
 )

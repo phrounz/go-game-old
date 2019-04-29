@@ -8,3 +8,7 @@ move LudumDare44.exe ..\..\release\
 move LudumDare44SelfContained.exe ..\..\release\
 
 @echo wasmgo serve -f "-tags USE_SELFCONTAINED_MODE"
+
+@echo set GOOS=js
+@echo set GOARCH=wasm
+@echo go build -o yourgame.wasm -tags USE_SELFCONTAINED_MODE
