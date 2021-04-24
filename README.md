@@ -1,4 +1,6 @@
+# go-game-old
 
+This repo is for compatibility of **go-game**. See the new version: [go-game](https://github.com/phrounz/go-game).
 
 ### Install a full environment from scratch
 
